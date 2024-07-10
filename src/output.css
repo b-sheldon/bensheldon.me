@@ -645,8 +645,13 @@ video {
   padding: 0.5rem;
 }
 
-.pl-20 {
-  padding-left: 5rem;
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .text-center {
@@ -657,6 +662,10 @@ video {
   text-align: start;
 }
 
+.font-marcellus {
+  font-family: Marcellus SC, serif;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -665,6 +674,11 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-xl {
@@ -692,14 +706,62 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.github-logo {
+  background: linear-gradient(
+    135deg,
+    #7f33f0 0%,
+    #b733f0 25%,
+    #cd33f0 50%,
+    #e333f0 75%,
+    #f033e0 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  :hover{
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.instagram-logo {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  :hover{
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.linkedin-logo {
+  background: linear-gradient(
+    45deg,
+    #0036b5 0%,
+    #0058b5 25%,
+    #0077B5 50%,
+    #007fb5 75%,
+    #008eb5 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  :hover{
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 .hover\:translate-y-10:hover {
   --tw-translate-y: 2.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
+.hover\:scale-125:hover {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -712,6 +774,10 @@ video {
 .hover\:bg-blue-medium:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(66 125 157 / var(--tw-bg-opacity));
+}
+
+.hover\:text-transparent:hover {
+  color: transparent;
 }
 
 .hover\:shadow-glow:hover {

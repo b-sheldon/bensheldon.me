@@ -12,6 +12,9 @@ module.exports = {
         'blue-light': '#9BBEC8',
         'blue-lighter': '#DDF2FD',
       },
+      fontFamily: {
+        marcellus: ['Marcellus SC', 'serif'],
+      },
     },
   },
   plugins: [],
