@@ -54,7 +54,7 @@ function Welcome(props) {
           <img
             src={eat}
             alt="eat"
-            onMouseEnter={(e) => handleHoverEnter(e, 'adventure!')}
+            onMouseEnter={(e) => handleHoverEnter(e, 'eat!')}
             onMouseLeave={(e) => handleHoverEnter(e, '____')}
             className="w-full h-full object-cover"
           />
