@@ -7,10 +7,12 @@ module.exports = {
         glow: '0 0px 10px 5px rgba(56, 161, 105, 0.6)',
       },
       colors: {
-        'blue-dark': '#164863',
-        'blue-medium': '#427D9D',
-        'blue-light': '#9BBEC8',
-        'blue-lighter': '#DDF2FD',
+        blue: {
+          dark: '#164863',
+          DEFAULT: '#427D9D',
+          light: '#9BBEC8',
+          lighter: '#DDF2FD',
+        },
       },
       fontFamily: {
         marcellus: ['Marcellus SC', 'serif'],

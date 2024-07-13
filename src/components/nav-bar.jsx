@@ -3,10 +3,10 @@ import React from 'react';
 
 function NavBar(props) {
   return (
-    <div className="flex flex-row gap-8 text-xl justify-end mx-4 gap-2">
-      <button type="button" className="text-blue-light p-2 rounded-lg hover:bg-blue-medium">Home</button>
-      <button type="button" className="text-blue-light p-2 rounded-lg hover:bg-blue-medium">About Me</button>
-      <button type="button" className="text-blue-light p-2 rounded-lg hover:bg-blue-medium">Projects</button>
+    <div className="flex flex-row justify-end gap-2 gap-8 mx-4 text-xl">
+      <button type="button" className="p-2 rounded-lg text-blue-light hover:bg-blue">Home</button>
+      <button type="button" className="p-2 rounded-lg text-blue-light hover:bg-blue">About Me</button>
+      <button type="button" className="p-2 rounded-lg text-blue-light hover:bg-blue">Projects</button>
     </div>
   );
 }
