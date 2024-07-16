@@ -32,31 +32,23 @@ const Projects = (props) => {
 
   const { carouselFragment, slideToNextItem, slideToPrevItem } = useSpringCarousel({
     withLoop: true,
-    items: [
-      {
-        id: 'item-1',
+    items: projects.map((project) => {
+      return {
+        ...project,
         renderItem: (
-          <Card project={projects[0]} className="w-48 h-64" />
+          <div
+            className="relative flex flex-col items-center justify-center w-full"
+          >
+            <Card project={project} />
+          </div>
         ),
-      },
-      {
-        id: 'item-2',
-        renderItem: (
-          <Card project={projects[1]} className="w-48 h-64" />
-        ),
-      },
-      {
-        id: 'item-3',
-        renderItem: (
-          <Card project={projects[2]} className="w-48 h-64" />
-        ),
-      },
-    ],
+      };
+    }),
   });
 
   return (
     <div className="h-[calc(100vh-44px)] flex flex-col justify-center gap-16">
-      <div className="h-64">
+      <div className="flex flex-row items-center justify-center w-1/2 mx-auto h-3/4 overflow-clip rounded-xl">
         {carouselFragment}
       </div>
       <div className="flex flex-row self-center gap-4 text-6xl">
