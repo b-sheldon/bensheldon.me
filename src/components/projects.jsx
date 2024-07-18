@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSpringCarousel } from 'react-spring-carousel';
 import { PiArrowCircleLeftThin, PiArrowCircleRightThin } from 'react-icons/pi';
 import Card from './card';
@@ -33,20 +33,22 @@ const Projects = (props) => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(projects[0].id);
+  const [slideNext, setSlideNext] = useState(false);
+  const [slidePrev, setSlidePrev] = useState(false);
 
   const { carouselFragment, slideToNextItem, slideToPrevItem, useListenToCustomEvent } = useSpringCarousel({
     withLoop: true,
-    itemsPerSlide: 3,
+    itemsPerSlide: 1,
     initialStartingPosition: 'center',
-    gutter: 32,
+    gutter: 128,
     items: projects.map((project) => {
       return {
         ...project,
         renderItem: (
           <div
-            className={`relative flex flex-col items-center justify-center w-full transition-all duration-500 ${currentSlide === project.id ? 'scale-125' : 'scale-100 opacity-50'}`}
+            className={`relative flex flex-col items-center justify-center w-full transition-all duration-500 ${currentSlide === project.id ? 'scale-110' : 'scale-100 opacity-50'}`}
           >
-            <Card project={project} />
+            <Card project={project} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} setSlideNext={setSlideNext} setSlidePrev={setSlidePrev} />
           </div>
         ),
       };
@@ -59,9 +61,19 @@ const Projects = (props) => {
     }
   });
 
+  useEffect(() => {
+    if (slideNext) {
+      slideToNextItem();
+      setSlideNext(false);
+    } else if (slidePrev) {
+      slideToPrevItem();
+      setSlidePrev(false);
+    }
+  }, [slideNext, slidePrev]);
+
   return (
-    <div className="h-[calc(100vh-44px)] flex flex-col justify-center gap-16">
-      <div className="flex flex-row items-center justify-center w-screen h-3/4 overflow-clip rounded-xl">
+    <div className="h-[calc(100vh-44px)] flex flex-col justify-center gap-32">
+      <div className="flex flex-row items-center justify-center w-1/2 max-w-[700px] mx-auto h-2/3 rounded-xl">
         {carouselFragment}
       </div>
       <div className="flex flex-row self-center gap-4 text-6xl">
