@@ -37,16 +37,17 @@ const Projects = (props) => {
   const [slidePrev, setSlidePrev] = useState(false);
 
   const { carouselFragment, slideToNextItem, slideToPrevItem, useListenToCustomEvent } = useSpringCarousel({
-    withLoop: true,
+    disableGestures: true,
+    gutter: 128,
     itemsPerSlide: 1,
     initialStartingPosition: 'center',
-    gutter: 128,
+    withLoop: true,
     items: projects.map((project) => {
       return {
         ...project,
         renderItem: (
           <div
-            className={`relative flex flex-col items-center justify-center w-full transition-all duration-500 ${currentSlide === project.id ? 'scale-110' : 'scale-100 opacity-50'}`}
+            className={`relative flex flex-col items-center justify-center w-full transition-all duration-500 cursor-pointer ${currentSlide === project.id ? 'scale-110' : 'scale-100 opacity-50'}`}
           >
             <Card project={project} currentSlide={currentSlide} setCurrentSlide={setCurrentSlide} setSlideNext={setSlideNext} setSlidePrev={setSlidePrev} />
           </div>
