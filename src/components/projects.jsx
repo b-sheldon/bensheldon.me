@@ -14,7 +14,7 @@ const Projects = (props) => {
       description: 'Welcome to Harmonize, the ultimate social experience for music lovers! Sign in with your Spotify account and dive into a vibrant community of music enthusiasts. Follow your friends to discover the songs they’re loving, or share your own favorite tracks with personalized posts. Connect, share, and celebrate music together with Harmonize!',
       skills: ['React', 'JS', 'CSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Spotify API'],
       links: ['link1', 'link2'],
-      images: [KeyShot1, 'img2'],
+      images: ['img1', 'img2'],
     },
     {
       id: 'project1',
@@ -30,7 +30,7 @@ const Projects = (props) => {
       description: 'This is a description of project 3',
       skills: ['skill1', 'skill2'],
       links: ['link1', 'link2'],
-      images: ['img1', 'img2'],
+      images: [KeyShot1, 'img2'],
     },
   ];
 
