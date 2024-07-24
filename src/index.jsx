@@ -37,7 +37,7 @@ const MainContent = (props) => {
 const App = (props) => {
   return (
     <BrowserRouter>
-      <div className="bg-blue-dark text-blue-lighter">
+      <div className="relative bg-blue-dark text-blue-lighter">
         <NavBar />
         <Routes>
           <Route path="/" element={<MainContent />} />
