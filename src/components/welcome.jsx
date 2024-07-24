@@ -1,27 +1,27 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
-import React, { useState } from 'react';
+import React from 'react';
 import adventure from '../img/adventure.png';
 import climb from '../img/climb.png';
 import ski from '../img/ski.png';
 import eat from '../img/eat.png';
 
 function Welcome(props) {
-  const [text, setText] = useState('____');
+  // const [text, setText] = useState('____');
 
   const handleHoverEnter = (event, action) => {
-    setText(action);
+    // setText(action);
   };
 
   return (
-    <div id="welcome" className="flex flex-col justify-center h-screen gap-12 px-10 text-4xl">
+    <div id="welcome" className="flex flex-col justify-center h-screen gap-16 px-10 text-4xl">
       <div className="text-6xl text-center font-marcellus">Ben Sheldon</div>
       <div className="flex flex-row justify-center gap-8 text-blue-light">
         <a href="https://github.com/b-sheldon"><i className="transition-all fa-brands fa-github hover:scale-125 github-logo hover:text-transparent" /></a>
         <a href="https://www.linkedin.com/in/ben-sheldon/"><i className="transition-all fa-brands fa-linkedin hover:scale-125 linkedin-logo hover:text-transparent" /></a>
         <a href="https://www.instagram.com/ben.sheldon/"><i className="transition-all fa-brands fa-instagram hover:scale-125 instagram-logo hover:text-transparent" /></a>
       </div>
-      <div className="pl-10 text-3xl text-start text-blue-light">{`I love to ${text}`}</div>
+      {/* <div className="pl-10 text-3xl text-start text-blue-light">{`I love to ${text}`}</div> */}
       <div className="flex flex-row flex-wrap items-start justify-center gap-8">
         <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow hover:scale-150 hover:translate-y-10">
           <img
