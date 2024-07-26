@@ -5,19 +5,8 @@ import './style.scss';
 import Welcome from './components/welcome';
 import NavBar from './components/nav-bar';
 import Projects from './components/projects';
+import About from './components/about';
 
-const About = (props) => {
-  return <div> All there is to know about me </div>;
-};
-// const Welcome = (props) => {
-//   return (
-//     <div>
-//       Welcome
-//       <Counter />
-//       <Controls />
-//     </div>
-//   );
-// };
 const Test = (props) => {
   const { id } = useParams();
   return <div> ID: {id} </div>;
@@ -30,6 +19,7 @@ const MainContent = (props) => {
   return (
     <div className="w-full h-full">
       <Welcome />
+      <About />
       <Projects />
     </div>
   );
