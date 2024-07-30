@@ -17,12 +17,12 @@ function About(props) {
           </div>
         </div>
         <div className="flex flex-col justify-around h-full grow basis-1">
-          <div>
-            This is where some about me text is going to go and it will be very interesting and informative.
+          <div className="text-2xl">
+            {'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems.'}
           </div>
           <div className="flex flex-col justify-between gap-4">
             <div className="text-3xl text-blue">
-              My Skills Include {activeSkill}.
+              My Skills Include <span className="text-blue-light">{activeSkill}</span>.
             </div>
             <div className="flex flex-row flex-wrap gap-4 text-6xl">
               {skills.map((skill) => (
