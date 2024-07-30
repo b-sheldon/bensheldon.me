@@ -22,7 +22,7 @@ function NavBar(props) {
   };
 
   return (
-    <div className="fixed top-0 right-0 z-50 flex flex-row justify-end w-screen gap-2 gap-4 p-2 mx-4 text-xl shadow bg-blue text-blue-light">
+    <div className="fixed top-0 right-0 z-50 flex flex-row justify-end w-screen gap-4 px-4 py-2 text-xl shadow bg-blue text-blue-light">
       <button type="button" className="p-2 rounded-lg hover:bg-blue-dark" onClick={handleClickHome}>Home</button>
       <button type="button" className="p-2 rounded-lg hover:bg-blue-dark" onClick={handleClickAbout}>About Me</button>
       <button type="button" className="p-2 rounded-lg hover:bg-blue-dark" onClick={handleClickProjects}>Projects</button>
