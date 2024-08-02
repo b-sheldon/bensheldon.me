@@ -807,6 +807,10 @@ video {
   gap: 6rem;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .self-center {
   align-self: center;
 }

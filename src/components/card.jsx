@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlipCard from 'reactjs-flip-card';
+import Skill from './skill';
 
 const Card = (props) => {
   /**
@@ -55,9 +56,14 @@ const Card = (props) => {
         <img src={images[0]} alt={title} />
       </div>
       <div className="w-full h-full p-2 grow basis-1 bg-blue rounded-b-xl">
-        <div className="flex flex-col gap-2">
-          <div>
-            Skills: {skills}
+        <div className="flex flex-col gap-4 text-xl">
+          <div className="flex flex-row gap-2">
+            Skills:
+            <div className="flex flex-row gap-1 text-3xl">
+              {skills.map((skill) => (
+                <Skill key={skill} skill={skill} />
+              ))}
+            </div>
           </div>
           <div>
             Links: {links}

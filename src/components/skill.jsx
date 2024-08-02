@@ -23,8 +23,12 @@ const Skill = (props) => {
   };
   const { skill, setActiveSkill } = props;
 
+  const handleMouseEnter = () => {
+    if (setActiveSkill) setActiveSkill(skill);
+  };
+
   return (
-    <div className="transition-all text-blue hover:text-blue-light hover:scale-110" onMouseEnter={() => setActiveSkill(skill)}>
+    <div className="transition-all hover:text-blue-light hover:scale-110" onMouseEnter={handleMouseEnter}>
       {skills[skill]}
     </div>
   );

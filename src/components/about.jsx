@@ -38,7 +38,7 @@ function About(props) {
             <div className="text-3xl text-blue">
               My Skills Include <span className="text-blue-light">{activeSkill}</span>.
             </div>
-            <div className="flex flex-row flex-wrap justify-center gap-4 text-6xl">
+            <div className="flex flex-row flex-wrap justify-center gap-4 text-6xl text-blue">
               {skills.map((skill) => (
                 <Skill key={skill} skill={skill} setActiveSkill={setActiveSkill} />
               ))}
