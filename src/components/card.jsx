@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlipCard from 'reactjs-flip-card';
+import Link from './link';
 import Skill from './skill';
 
 const Card = (props) => {
@@ -14,7 +15,7 @@ const Card = (props) => {
    * }
    */
   const { project, currentSlide, setCurrentSlide, setSlideNext, setSlidePrev } = props;
-  const { title, description, skills, links, images } = project;
+  const { title, date, description, technologies, skills, links, sources } = project;
   const [isFlipped, setIsFlipped] = useState(false);
   const styles = {
     card: { width: '100%', height: '100%', borderRadius: '10px' },
@@ -41,40 +42,52 @@ const Card = (props) => {
 
   const renderCardFront = (
     <div className="flex flex-col items-center w-full h-full rounded-xl text-blue-lighter bg-blue-light">
-      <div className="p-2 grow basis-1 bg-blue-light">
-        <img src={images[0]} alt={title} />
+      <div className="flex flex-col justify-center p-2 grow basis-1 bg-blue-light rounded-t-xl">
+        { sources[0].type === 'img'
+          ? <img src={sources[0].src} alt={title} />
+          : <video src={sources[0].src} autoPlay loop muted /> }
       </div>
-      <div className="w-full h-full p-2 grow basis-1 bg-blue rounded-b-xl">
-        {description}
+      <div className="flex flex-col w-full h-full gap-2 p-4 grow basis-1 bg-blue rounded-b-xl">
+        <div className="flex flex-row justify-between text-2xl font-bold text-blue-light">
+          <div>{title} | {date}</div>
+          <div className="flex flex-row gap-2 text-3xl">
+            {links.map((link) => (
+              <Link key={link} href={link.href} icon={link.icon} />
+            ))}
+          </div>
+        </div>
+        <div className="justify-self-center">
+          {description}
+        </div>
       </div>
     </div>
   );
 
   const renderCardBack = (
     <div className="flex flex-col items-center w-full h-full rounded-xl text-blue-lighter bg-blue-light">
-      <div className="p-2 grow basis-1 bg-blue-light">
-        <img src={images[0]} alt={title} />
+      <div className="flex flex-col justify-center p-2 grow basis-1 bg-blue-light rounded-t-xl">
+        { sources[1].type === 'img'
+          ? <img src={sources[1].src} alt={title} />
+          : <video src={sources[1].src} autoPlay loop muted /> }
       </div>
-      <div className="w-full h-full p-2 grow basis-1 bg-blue rounded-b-xl">
-        <div className="flex flex-col gap-4 text-xl">
-          <div className="flex flex-row gap-2">
-            Skills:
-            <div className="flex flex-row gap-1 text-3xl">
-              {skills.map((skill) => (
-                <Skill key={skill} skill={skill} />
-              ))}
-            </div>
+      <div className="flex flex-col w-full h-full gap-2 p-4 grow basis-1 bg-blue rounded-b-xl">
+        <div className="flex flex-row justify-between text-2xl font-bold text-blue-light">
+          <div>Technologies</div>
+          <div className="flex flex-row gap-1 text-3xl">
+            {skills.map((skill) => (
+              <Skill key={skill} skill={skill} />
+            ))}
           </div>
-          <div>
-            Links: {links}
-          </div>
+        </div>
+        <div className="justify-self-center">
+          {technologies}
         </div>
       </div>
     </div>
   );
 
   return (
-    <div className="absolute top-0 left-0 w-full h-full">
+    <div className="absolute top-0 left-0 w-full h-full cursor-pointer">
       <ReactFlipCard
         frontStyle={styles.card}
         backStyle={styles.card}

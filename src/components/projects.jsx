@@ -5,33 +5,41 @@ import { useSpringCarousel } from 'react-spring-carousel';
 import { PiArrowCircleLeftThin, PiArrowCircleRightThin } from 'react-icons/pi';
 import Card from './card';
 import KeyShot1 from '../img/projects/ignight/KeyShot1.png';
+import KeyShot2 from '../img/projects/ignight/KeyShot2.png';
 import HarmonizeFeed from '../img/projects/harmonize/harmonize-feed.png';
+import HarmonizePreview from '../img/projects/harmonize/harmonize-preview.mp4';
 
 const Projects = (props) => {
   const projects = [
     {
       id: 'project0',
       title: 'Harmonize',
+      date: 'May 2024',
       description: 'Welcome to Harmonize, the ultimate social experience for music lovers! Sign in with your Spotify account and dive into a vibrant community of music enthusiasts. Follow your friends to discover the songs they’re loving, or share your own favorite tracks with personalized posts. Connect, share, and celebrate music together with Harmonize!',
+      technologies: 'This is a description of the technologies used',
       skills: ['React', 'JS', 'CSS', 'Node.js', 'Express', 'MongoDB', 'Mongoose', 'Spotify API'],
-      links: ['link1', 'link2'],
-      images: [HarmonizeFeed, 'img2'],
+      links: [{ href: 'https://github.com/dartmouth-cs52-24s/project-client-spotify-sharing/', icon: 'GitHub' }, { href: 'https://harmonize-client.onrender.com/', icon: 'Website' }],
+      sources: [{ type: 'img', src: HarmonizeFeed }, { type: 'video', src: HarmonizePreview }],
     },
     {
       id: 'project1',
       title: 'What the Yap?',
+      date: 'April 2024',
       description: 'This is a description of project 2',
+      technologies: 'This is a description of the technologies used',
       skills: ['skill1', 'skill2'],
-      links: ['link1', 'link2'],
-      images: ['img1', 'img2'],
+      links: [{ href: 'https://github.com/b-sheldon/whattheyap', icon: 'GitHub' }, { href: 'src', icon: 'Website' }],
+      sources: [{ type: 'img', src: 'img1' }, { type: 'video', src: 'img2' }],
     },
     {
       id: 'project2',
       title: 'Ignight',
+      date: 'January - March 2024',
       description: 'This is a description of project 3',
+      technologies: 'This is a description of the technologies used',
       skills: ['skill1', 'skill2'],
-      links: ['link1', 'link2'],
-      images: [KeyShot1, 'img2'],
+      links: [{ href: 'https://github.com/b-sheldon/ignight', icon: 'GitHub' }, { href: 'src', icon: 'Website' }],
+      sources: [{ type: 'img', src: KeyShot1 }, { type: 'img', src: KeyShot2 }],
     },
   ];
 

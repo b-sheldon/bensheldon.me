@@ -1,14 +1,21 @@
 import React from 'react';
+import { CiGlobe } from 'react-icons/ci';
+import { FaGithub } from 'react-icons/fa6';
 
 const Link = (props) => {
-  const { link, text } = props;
+  const { href, icon } = props;
+  const links = {
+    GitHub: <FaGithub />,
+    Website: <CiGlobe />,
+  };
   return (
-    <a href={link}
+    <a href={href}
       target="_blank"
       rel="noreferrer"
-      className="p-2 rounded-lg hover:bg-blue-dark"
+      className="hover:text-blue-dark"
+      onClick={(e) => e.stopPropagation()}
     >
-      {text}
+      {links[icon]}
     </a>
   );
 };
