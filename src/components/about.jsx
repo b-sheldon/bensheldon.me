@@ -35,7 +35,7 @@ function About(props) {
           <div className="md:text-xl lg:text-2xl">
             Hi, I'm Ben. I'm a software developer with a passion for finding creative solutions to complex problems.
             I'm a rising senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering.
-            I'm a Ski Patroller at the Dartmouth Skiway, an avid climber, and a board game enthusiast.
+            I'm a Ski Patroller at the Dartmouth Skiway, an avid climber, and a lover of board games.
           </div>
           <div className="flex flex-col justify-between gap-4">
             <div className="md:text-2xl lg:text-3xl text-blue">
