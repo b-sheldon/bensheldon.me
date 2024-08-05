@@ -23,7 +23,7 @@ function Welcome(props) {
       </div>
       {/* <div className="pl-10 text-3xl text-start text-blue-light">{`I love to ${text}`}</div> */}
       <div className="flex flex-row flex-wrap items-start justify-center gap-8">
-        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow hover:scale-150 hover:translate-y-10">
+        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow">
           <img
             src={ski}
             alt="ski"
@@ -32,7 +32,7 @@ function Welcome(props) {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow hover:scale-150 hover:translate-y-10">
+        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow">
           <img
             src={climb}
             alt="climb"
@@ -41,7 +41,7 @@ function Welcome(props) {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow hover:scale-150 hover:translate-y-10">
+        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow">
           <img
             src={adventure}
             alt="adventure"
@@ -50,7 +50,7 @@ function Welcome(props) {
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow hover:scale-150 hover:translate-y-10">
+        <div className="w-1/5 overflow-hidden transition-all ease-in-out rounded-full aspect-square hover:shadow-glow">
           <img
             src={eat}
             alt="eat"
