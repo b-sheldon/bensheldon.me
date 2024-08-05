@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React, { useEffect, useState } from 'react';
@@ -31,14 +32,16 @@ function About(props) {
           </div>
         </div>
         <div className="flex flex-col justify-center h-full gap-24 grow basis-1">
-          <div className="text-2xl">
-            {'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems.'}
+          <div className="md:text-xl lg:text-2xl">
+            Hi, I'm Ben. I'm a software developer with a passion for finding creative solutions to complex problems.
+            I'm a rising senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering.
+            I'm a Ski Patroller at the Dartmouth Skiway, an avid climber, and a board game enthusiast.
           </div>
           <div className="flex flex-col justify-between gap-4">
-            <div className="text-3xl text-blue">
+            <div className="md:text-2xl lg:text-3xl text-blue">
               My Skills Include <span className="text-blue-light">{activeSkill}</span>.
             </div>
-            <div className="flex flex-row flex-wrap justify-center gap-4 text-6xl text-blue">
+            <div className="flex flex-row flex-wrap justify-center gap-4 text-4xl md:text-5xl lg:text-6xl text-blue">
               {skills.map((skill) => (
                 <Skill key={skill} skill={skill} setActiveSkill={setActiveSkill} />
               ))}

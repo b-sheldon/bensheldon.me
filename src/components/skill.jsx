@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaReact, FaJava, FaPython, FaNodeJs, FaUnity, FaHtml5, FaCss3Alt } from 'react-icons/fa6';
+import { FaReact, FaJava, FaPython, FaNodeJs, FaUnity, FaHtml5, FaCss3Alt, FaMeta, FaSpotify } from 'react-icons/fa6';
 import { RiTailwindCssFill, RiJavascriptFill } from 'react-icons/ri';
 import { SiCplusplus, SiCsharp, SiMongodb, SiFirebase } from 'react-icons/si';
 import { GoGitBranch } from 'react-icons/go';
@@ -20,6 +20,8 @@ const Skill = (props) => {
     HTML: <FaHtml5 />,
     CSS: <FaCss3Alt />,
     Firebase: <SiFirebase />,
+    Meta: <FaMeta />,
+    Spotify: <FaSpotify />,
   };
   const { skill, setActiveSkill } = props;
 

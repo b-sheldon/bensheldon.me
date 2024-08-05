@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlipCard from 'reactjs-flip-card';
+import ReactPlayer from 'react-player';
 import Link from './link';
 import Skill from './skill';
 
@@ -45,18 +46,18 @@ const Card = (props) => {
       <div className="flex flex-col justify-center p-2 grow basis-1 bg-blue-light rounded-t-xl">
         { sources[0].type === 'img'
           ? <img src={sources[0].src} alt={title} />
-          : <video src={sources[0].src} autoPlay loop muted /> }
+          : <ReactPlayer url={sources[0].src} autoPlay loop muted /> }
       </div>
       <div className="flex flex-col w-full h-full gap-2 p-4 grow basis-1 bg-blue rounded-b-xl">
-        <div className="flex flex-row justify-between text-2xl font-bold text-blue-light">
+        <div className="flex flex-row justify-between font-bold md:text-xl lg:text-2xl text-blue-light">
           <div>{title} | {date}</div>
-          <div className="flex flex-row gap-2 text-3xl">
+          <div className="flex flex-row gap-2 text-2xl lg:text-3xl">
             {links.map((link) => (
-              <Link key={link} href={link.href} icon={link.icon} />
+              <Link key={link.icon + title} href={link.href} icon={link.icon} />
             ))}
           </div>
         </div>
-        <div className="justify-self-center">
+        <div className="overflow-y-auto justify-self-center">
           {description}
         </div>
       </div>
@@ -70,16 +71,16 @@ const Card = (props) => {
           ? <img src={sources[1].src} alt={title} />
           : <video src={sources[1].src} autoPlay loop muted /> }
       </div>
-      <div className="flex flex-col w-full h-full gap-2 p-4 grow basis-1 bg-blue rounded-b-xl">
-        <div className="flex flex-row justify-between text-2xl font-bold text-blue-light">
+      <div className="flex flex-col justify-start w-full h-full gap-2 p-4 grow basis-1 bg-blue rounded-b-xl">
+        <div className="flex flex-row justify-between font-bold md:text-xl lg:text-2xl text-blue-light">
           <div>Technologies</div>
-          <div className="flex flex-row gap-1 text-3xl">
+          <div className="flex flex-row gap-1 text-2xl lg:text-3xl">
             {skills.map((skill) => (
-              <Skill key={skill} skill={skill} />
+              <Skill key={skill + title} skill={skill} />
             ))}
           </div>
         </div>
-        <div className="justify-self-center">
+        <div className="overflow-y-auto justify-self-center">
           {technologies}
         </div>
       </div>

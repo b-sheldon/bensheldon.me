@@ -626,15 +626,6 @@ video {
   margin-right: auto;
 }
 
-.my-\[calc\(60px\+10vw\)\] {
-  margin-top: calc(60px + 10vw);
-  margin-bottom: calc(60px + 10vw);
-}
-
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
 }
@@ -655,16 +646,8 @@ video {
   height: 100vh;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-4 {
-  height: 1rem;
-}
-
-.max-h-full {
-  max-height: 100%;
+.h-1\/2 {
+  height: 50%;
 }
 
 .w-1\/2 {
@@ -675,6 +658,10 @@ video {
   width: 20%;
 }
 
+.w-\[30vw\] {
+  width: 30vw;
+}
+
 .w-full {
   width: 100%;
 }
@@ -683,36 +670,8 @@ video {
   width: 100vw;
 }
 
-.w-auto {
-  width: auto;
-}
-
-.w-\[25vw\] {
-  width: 25vw;
-}
-
-.w-\[30vw\] {
-  width: 30vw;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
 .max-w-\[700px\] {
   max-width: 700px;
-}
-
-.max-w-full {
-  max-width: 100%;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.flex-grow {
-  flex-grow: 1;
 }
 
 .grow {
@@ -721,10 +680,6 @@ video {
 
 .basis-1 {
   flex-basis: 0.25rem;
-}
-
-.basis-0 {
-  flex-basis: 0px;
 }
 
 .scale-100 {
@@ -736,6 +691,10 @@ video {
 .scale-110 {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -767,6 +726,10 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -783,6 +746,10 @@ video {
   justify-content: space-around;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -795,24 +762,16 @@ video {
   gap: 0.5rem;
 }
 
+.gap-24 {
+  gap: 6rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-24 {
-  gap: 6rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.self-end {
-  align-self: flex-end;
 }
 
 .self-center {
@@ -825,6 +784,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .rounded-full {
@@ -862,11 +825,6 @@ video {
 .bg-blue-light {
   --tw-bg-opacity: 1;
   background-color: rgb(155 190 200 / var(--tw-bg-opacity));
-}
-
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .object-cover {
@@ -907,14 +865,6 @@ video {
 
 .pt-\[84px\] {
   padding-top: 84px;
-}
-
-.pb-\[8px\] {
-  padding-bottom: 8px;
-}
-
-.pt-\[68px\] {
-  padding-top: 68px;
 }
 
 .text-center {
@@ -971,11 +921,6 @@ video {
 .text-blue-lighter {
   --tw-text-opacity: 1;
   color: rgb(221 242 253 / var(--tw-text-opacity));
-}
-
-.text-blue-dark {
-  --tw-text-opacity: 1;
-  color: rgb(22 72 99 / var(--tw-text-opacity));
 }
 
 .opacity-50 {
@@ -1094,6 +1039,11 @@ body {
   color: rgb(66 125 157 / var(--tw-text-opacity));
 }
 
+.hover\:text-blue-dark:hover {
+  --tw-text-opacity: 1;
+  color: rgb(22 72 99 / var(--tw-text-opacity));
+}
+
 .hover\:text-blue-light:hover {
   --tw-text-opacity: 1;
   color: rgb(155 190 200 / var(--tw-text-opacity));
@@ -1103,13 +1053,54 @@ body {
   color: transparent;
 }
 
-.hover\:text-blue-dark:hover {
-  --tw-text-opacity: 1;
-  color: rgb(22 72 99 / var(--tw-text-opacity));
-}
-
 .hover\:shadow-glow:hover {
   --tw-shadow: 0 0px 10px 5px rgba(56, 161, 105, 0.6);
   --tw-shadow-colored: 0 0px 10px 5px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+@media (min-width: 640px) {
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
 }
