@@ -17,7 +17,7 @@ const FallBack = (props) => {
 
 const MainContent = (props) => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full" onScroll={() => console.log('scrolling')}>
       <Welcome />
       <About />
       <Projects />
