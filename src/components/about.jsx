@@ -1,7 +1,9 @@
+/* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React, { useEffect, useState } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 import Skill from './skill';
 import Portrait1 from '../img/portrait_1.png';
 import Portrait2 from '../img/portrait_2.png';
@@ -32,11 +34,20 @@ function About(props) {
           </div>
         </div>
         <div className="flex flex-col justify-center h-full gap-24 grow basis-1">
-          <div className="md:text-xl lg:text-2xl">
-            Hi, I'm Ben. I'm a software developer with a passion for finding creative solutions to complex problems.
-            I'm a rising senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering.
-            I'm a Ski Patroller at the Dartmouth Skiway, an avid climber, and a lover of board games.
-          </div>
+          <TypeAnimation
+            className="md:text-xl lg:text-2xl"
+            speed="10"
+            sequence={
+              ['Hi, I\'m Ben.',
+                1000,
+                'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems.',
+                1000,
+                'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems. I\'m a rising senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering.',
+                1000,
+                'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems. I\'m a rising senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering. I\'m a Ski Patroller at the Dartmouth Skiway, an avid climber, and a lover of board games.',
+              ]
+            }
+          />
           <div className="flex flex-col justify-between gap-4">
             <div className="md:text-2xl lg:text-3xl text-blue">
               My Skills Include <span className="text-blue-light">{activeSkill}</span>.
