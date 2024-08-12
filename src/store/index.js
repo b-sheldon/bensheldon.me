@@ -4,9 +4,8 @@ import { immer } from 'zustand/middleware/immer';
 
 const useStore = create(
   persist(devtools(immer((set) => ({
-    count: 0,
-    increment: () => set((draftState) => { draftState.count += 1; }, false, 'count/increment'),
-    decrement: () => set((draftState) => { draftState.count -= 1; }, false, 'count/decrement'),
+    activePage: 'welcome',
+    setActivePage: (page) => set((draftState) => { draftState.activePage = page; }, false, 'activePage/setActivePage'),
   }))), {
     name: 'counter-storage',
   }),

@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React, { useEffect, useState } from 'react';
+import useStore from '../store';
 
 function NavBar(props) {
-  const [activePage, setActivePage] = useState('welcome');
   const [scrolling, setScrolling] = useState(false);
+  const { activePage, setActivePage } = useStore();
 
   const handleClickAbout = () => {
     const about = document.getElementById('about');
@@ -68,6 +69,25 @@ function NavBar(props) {
       }, 1500);
     }
   }, [scrolling]);
+
+  useEffect(() => {
+    if (activePage === 'welcome') {
+      const welcome = document.getElementById('welcome');
+      if (welcome && ((document.documentElement.scrollTop || document.body.scrollTop) !== welcome.offsetTop)) {
+        welcome.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (activePage === 'about') {
+      const about = document.getElementById('about');
+      if (about && ((document.documentElement.scrollTop || document.body.scrollTop) !== about.offsetTop)) {
+        about.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else if (activePage === 'projects') {
+      const projects = document.getElementById('projects');
+      if (projects && ((document.documentElement.scrollTop || document.body.scrollTop) !== projects.offsetTop)) {
+        projects.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [activePage]);
 
   return (
     <div className="fixed top-0 right-0 z-50 flex flex-row justify-end w-screen gap-4 px-4 py-2 text-xl shadow bg-blue text-blue-light">
