@@ -29,7 +29,7 @@ const Projects = (props) => {
       date: 'April 2024',
       description: 'What the Yap? lets you quickly generate study sets using AI-powered tools. It contains a voice powered tool that will read the flashcards/quiz questions to you, listen for your response (validating with AI), and provide feedback. It was designed with accessibility in mind, allowing users to engage with educational content purely through voice commands. It is a technology for any auditory learner, anyone with visual impairments, or anyone who wants to transform morning runs or commutes into a simultaneous opportunity for learning.',
       technologies: 'This app uses Node.js for the backend, with a Firebase system to track authentication and users\' study sets. It integrates with ChatGPT API to generate the flashcards, quizzes, and validate answers. It uses React and Tailwind for the frontend and Microsoft Azure Speech SDK to turn text-to-speech and speech-to-text.',
-      skills: ['React', 'Node.js', 'Firebase', 'TailwindCSS'],
+      skills: ['React', 'TailwindCSS', 'Node.js', 'Firebase', 'OpenAI API'],
       links: [{ href: 'https://github.com/b-sheldon/whattheyap', icon: 'GitHub' }, { href: 'https://devpost.com/software/yabber', icon: 'Website' }],
       sources: [{ type: 'img', src: WhatTheYapHome }, { type: 'video', src: WhatTheYapPreview }],
     },

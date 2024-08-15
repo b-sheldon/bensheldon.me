@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaReact, FaJava, FaPython, FaNodeJs, FaUnity, FaHtml5, FaCss3Alt, FaMeta, FaSpotify } from 'react-icons/fa6';
 import { RiTailwindCssFill, RiJavascriptFill } from 'react-icons/ri';
-import { SiCplusplus, SiCsharp, SiMongodb, SiFirebase } from 'react-icons/si';
+import { SiCplusplus, SiCsharp, SiMongodb, SiFirebase, SiOpenai } from 'react-icons/si';
 import { GoGitBranch } from 'react-icons/go';
 
 const Skill = (props) => {
@@ -22,6 +22,7 @@ const Skill = (props) => {
     Firebase: <SiFirebase />,
     Meta: <FaMeta />,
     Spotify: <FaSpotify />,
+    'OpenAI API': <SiOpenai />,
   };
   const { skill, setActiveSkill } = props;
 
