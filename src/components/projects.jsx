@@ -10,14 +10,38 @@ import HarmonizeFeed from '../img/projects/harmonize/harmonize-feed.png';
 import HarmonizePreview from '../img/projects/harmonize/harmonize-preview.mp4';
 import WhatTheYapPreview from '../img/projects/what-the-yap/what-the-yap-preview.mp4';
 import WhatTheYapHome from '../img/projects/what-the-yap/what-the-yap-home.png';
+import LostInSpaceKeyShot from '../img/projects/lost-in-space/Ben_UnityProject_KeyShot2.png';
+import LostInSpacePreview from '../img/projects/lost-in-space/Ben_UnityProject_VideoClip.mp4';
+import WaterCaveScene1 from '../img/projects/water-cave-scene/FP_RedCrystal.png';
+import WaterCaveScene4 from '../img/projects/water-cave-scene/FP_Angle4.mp4';
 
 const Projects = (props) => {
   const projects = [
+    // {
+    //   id: 'project3',
+    //   title: 'Replay',
+    //   date: 'Summer 2024',
+    //   description: 'Replay is an Electron web app that allows users to replay touches and gestures on Garmin flight deck displays by extracting data from the video stream. It overlays touch and gesture data over the video player and contains an interactive event log to view detailed information about and quickly navigate to each event. It is designed to increase the efficiency of reprocing and diagnosing issues with the flight deck displays. The source code and videos are unavailable due to the app containing proprietary information.',
+    //   technologies: 'Replay was built in Electron, using React and Tailwind CSS for the frontend, and Node.js, C++, and Python for the backend. The backend parses extracts events from the video stream and sends them to the frontend, which overlays the touches in-sync with the video player. Additionally, it integrates with Garmin\'s API to enable auto-updating.',
+    //   skills: ['Electron', 'React', 'Node.js', 'TailwindCSS', 'Python', 'C++'],
+    //   links: [],
+    //   sources: [{ type: 'img', src: '' }, { type: 'img', src: '' }],
+    // },
+    // {
+    //   id: 'project4',
+    //   title: 'Tune Link',
+    //   date: 'Summer 2024',
+    //   description: 'Tune Link enables you to quickly discover new music by using AI to generate song recommendations based on the songs you like and dislike. Just swipe right on songs you love and left on songs you don\'t, and Tune Link will create a personalized recommendations of new songs you\'re sure to enjoy. It\'s the perfect way to discover new music and expand your horizons!',
+    //   technologies: 'Tune Link uses React and Tailwind CSS for the frontend, with a Node.js backend and MongoDB database. It integrates with the Spotify API to access user data and music information, allowing users to play music. Additionally, it uses the OpenAI API to generate song recommendations based on user interaction.',
+    //   skills: ['React', 'Node.js', 'TailwindCSS', 'MongoDB', 'Express', 'Spotify', 'OpenAI API'],
+    //   links: [{ href: 'https://github.com/jcandrews2/tune-link', icon: 'GitHub' }, { href: '', icon: 'Website' }],
+    //   sources: [{ type: 'img', src: '' }, { type: 'img', src: '' }],
+    // },
     {
       id: 'project0',
       title: 'Harmonize',
       date: 'May 2024',
-      description: 'Welcome to Harmonize, the ultimate social experience for music lovers! Sign in with your Spotify account and dive into a vibrant community of music enthusiasts. Follow your friends to discover the songs they’re loving, or share your own favorite tracks with personalized posts. Connect, share, and celebrate music together with Harmonize!',
+      description: 'Welcome to Harmonize, the ultimate social experience for music lovers! Sign in with your Spotify account and dive into a vibrant community of music enthusiasts. Follow your friends to discover the songs they\'re loving, or share your own favorite tracks with personalized posts. Connect, share, and celebrate music together with Harmonize!',
       technologies: 'Harmonize uses React and Chakra UI for the frontend, with a Node.js backend and MongoDB database. It integrates with the Spotify API to access user data and music information, allowing users to play music and modify their playlists.',
       skills: ['React', 'Node.js', 'Express', 'MongoDB', 'Spotify'],
       links: [{ href: 'https://github.com/dartmouth-cs52-24s/project-client-spotify-sharing/', icon: 'GitHub' }, { href: 'https://harmonize-client.onrender.com/', icon: 'Website' }],
@@ -42,6 +66,26 @@ const Projects = (props) => {
       skills: ['Unity', 'C#', 'Meta'],
       links: [{ href: 'https://github.com/b-sheldon/ignight', icon: 'GitHub' }, { href: 'https://youtu.be/JBvYWwU9k4k', icon: 'Website' }],
       sources: [{ type: 'img', src: KeyShot1 }, { type: 'img', src: KeyShot4 }],
+    },
+    {
+      id: 'project5',
+      title: 'Lost in Space',
+      date: 'Winter 2024',
+      description: 'Lost in Space is a puzzle game where the player finds themself alone in an empty, eerie spaceship. As they explore their environment, they find that they can interact with the pedestals to move their environment. However, they must also collect the orbs in order to progress. As they progress through, the puzzles get progressively harder, with the player having to use their creativity to solve them. ',
+      technologies: 'Lost in Space was built using Unity and C#. It uses the Unity physics engine to allow the player to interact with the environment and move objects around. It also uses the Unity particle system to create a visually stunning environment. It also uses the Unity animation system to allow the camera to move around the environment, following the player.',
+      skills: ['Unity', 'C#'],
+      links: [{ href: 'https://github.com/b-sheldon/LostInSpace', icon: 'GitHub' }, { href: 'https://youtu.be/iWNw2rqqqQE', icon: 'Website' }],
+      sources: [{ type: 'img', src: LostInSpaceKeyShot }, { type: 'video', src: LostInSpacePreview }],
+    },
+    {
+      id: 'project6',
+      title: 'Water Cave Scene',
+      date: 'Winter 2023',
+      description: 'This project is a 3D scene of a water cave created using C++, OpenGL, and GLSL. The scene contains a 3D modeled cave with glowing crystals, animated water, and a hole to view the starry skybox outside. The scene is rendered in real-time and the camera can be moved to explore different angles within the scene.',
+      technologies: 'The most technically challenging aspects of creating this scene were the water animation, lighting calculations, and the skybox. The water animation was created using a Perlin noise function that changes over time. The lighting calculations were done using GLSL shaders to calculate the diffuse and specular lighting on the cave walls and crystals. The skybox was created using a cubemap texture to simulate the starry night.',
+      skills: ['C++', 'OpenGL'],
+      links: [{ href: 'https://github.com/b-sheldon/computer-graphics-projects', icon: 'GitHub' }],
+      sources: [{ type: 'video', src: WaterCaveScene4 }, { type: 'img', src: WaterCaveScene1 }],
     },
   ];
 
@@ -87,7 +131,7 @@ const Projects = (props) => {
 
   return (
     <div id="projects" className="h-screen">
-      <div className="flex flex-col justify-center h-full gap-16 pt-[84px]">
+      <div className="flex flex-col justify-center h-full gap-24 pt-[84px]">
         <div className="flex flex-row items-center justify-center w-1/2 max-w-[700px] mx-auto h-2/3 rounded-xl">
           {carouselFragment}
         </div>

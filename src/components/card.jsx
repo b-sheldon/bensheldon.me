@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlipCard from 'reactjs-flip-card';
-import ReactPlayer from 'react-player';
 import Link from './link';
 import Skill from './skill';
 
@@ -46,7 +45,7 @@ const Card = (props) => {
       <div className="flex flex-col justify-center p-2 grow basis-1 bg-blue-light rounded-t-xl">
         { sources[0].type === 'img'
           ? <img src={sources[0].src} alt={title} />
-          : <ReactPlayer url={sources[0].src} autoPlay loop muted /> }
+          : <video src={sources[0].src} autoPlay loop muted /> }
       </div>
       <div className="flex flex-col w-full h-full gap-2 p-4 grow basis-1 bg-blue rounded-b-xl">
         <div className="flex flex-row justify-between font-bold md:text-xl lg:text-2xl text-blue-light">

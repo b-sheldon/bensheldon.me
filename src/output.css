@@ -634,8 +634,8 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.h-2\/3 {
-  height: 66.666667%;
+.h-1\/2 {
+  height: 50%;
 }
 
 .h-full {
@@ -644,6 +644,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-2\/3 {
+  height: 66.666667%;
 }
 
 .w-1\/2 {

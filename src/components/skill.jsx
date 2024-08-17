@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaReact, FaJava, FaPython, FaNodeJs, FaUnity, FaHtml5, FaCss3Alt, FaMeta, FaSpotify } from 'react-icons/fa6';
 import { RiTailwindCssFill, RiJavascriptFill } from 'react-icons/ri';
-import { SiCplusplus, SiCsharp, SiMongodb, SiFirebase, SiOpenai } from 'react-icons/si';
+import { SiCplusplus, SiCsharp, SiMongodb, SiFirebase, SiOpenai, SiOpengl } from 'react-icons/si';
 import { GoGitBranch } from 'react-icons/go';
+import { IoLogoElectron } from 'react-icons/io5';
 
 const Skill = (props) => {
   const skills = {
@@ -23,6 +24,8 @@ const Skill = (props) => {
     Meta: <FaMeta />,
     Spotify: <FaSpotify />,
     'OpenAI API': <SiOpenai />,
+    Electron: <IoLogoElectron />,
+    OpenGL: <SiOpengl />,
   };
   const { skill, setActiveSkill } = props;
 

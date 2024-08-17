@@ -10,7 +10,7 @@ import Portrait1 from '../img/portrait_1.png';
 import Portrait2 from '../img/portrait_2.png';
 
 function About(props) {
-  const skills = ['React', 'TailwindCSS', 'JavaScript', 'Java', 'Python', 'C++', 'C#', 'MongoDB', 'Node.js', 'Unity', 'Git', 'HTML', 'CSS', 'Firebase'];
+  const skills = ['React', 'TailwindCSS', 'JavaScript', 'Java', 'Python', 'C++', 'C#', 'MongoDB', 'Node.js', 'Unity', 'Git', 'HTML', 'CSS', 'Firebase', 'Electron'];
   const [activeSkill, setActiveSkill] = useState('_____');
   const [portraitSize, setPortraitSize] = useState(Math.min(window.innerWidth * 0.3, window.innerHeight / 2 - 60));
   const { activePage } = useStore();
