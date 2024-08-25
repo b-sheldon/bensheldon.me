@@ -14,19 +14,20 @@ import LostInSpaceKeyShot from '../img/projects/lost-in-space/Ben_UnityProject_K
 import LostInSpacePreview from '../img/projects/lost-in-space/Ben_UnityProject_VideoClip.mp4';
 import WaterCaveScene1 from '../img/projects/water-cave-scene/FP_RedCrystal.png';
 import WaterCaveScene4 from '../img/projects/water-cave-scene/FP_Angle4.mp4';
+import ReplayPreview from '../img/projects/replay/replay-preview.mp4';
 
 const Projects = (props) => {
   const projects = [
-    // {
-    //   id: 'project3',
-    //   title: 'Replay',
-    //   date: 'Summer 2024',
-    //   description: 'Replay is an Electron web app that allows users to replay touches and gestures on Garmin flight deck displays by extracting data from the video stream. It overlays touch and gesture data over the video player and contains an interactive event log to view detailed information about and quickly navigate to each event. It is designed to increase the efficiency of reprocing and diagnosing issues with the flight deck displays. The source code and videos are unavailable due to the app containing proprietary information.',
-    //   technologies: 'Replay was built in Electron, using React and Tailwind CSS for the frontend, and Node.js, C++, and Python for the backend. The backend parses extracts events from the video stream and sends them to the frontend, which overlays the touches in-sync with the video player. Additionally, it integrates with Garmin\'s API to enable auto-updating.',
-    //   skills: ['Electron', 'React', 'Node.js', 'TailwindCSS', 'Python', 'C++'],
-    //   links: [],
-    //   sources: [{ type: 'img', src: '' }, { type: 'img', src: '' }],
-    // },
+    {
+      id: 'project3',
+      title: 'Replay',
+      date: 'Summer 2024',
+      description: 'Replay is an Electron web app that allows users to replay touches and gestures on Garmin flight deck displays by extracting data from the video stream. It overlays touch and gesture data over the video player, synchronized with the video, and contains an interactive event log to view detailed information about and quickly navigate to each event. It is designed to increase the efficiency of reproducing and diagnosing issues with the flight deck displays. The flight deck video and detailed event information are obscured for privacy reasons.',
+      technologies: 'Replay was built in Electron, using React and Tailwind CSS for the frontend, and Node.js, C++, and Python for the backend. The backend parses extracts events from the video stream and sends them to the frontend, which overlays the touches in-sync with the video player. Additionally, it integrates with Garmin\'s API to enable auto-updating.',
+      skills: ['Electron', 'React', 'Node.js', 'TailwindCSS', 'Python', 'C++'],
+      links: [],
+      sources: [{ type: 'video', src: ReplayPreview }, { type: 'video', src: ReplayPreview }],
+    },
     // {
     //   id: 'project4',
     //   title: 'Tune Link',

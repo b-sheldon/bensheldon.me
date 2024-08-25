@@ -28,6 +28,7 @@ const Card = (props) => {
   }, [currentSlide, project.id]);
 
   const handleClick = (e) => {
+    e.preventDefault();
     if (currentSlide === project.id) {
       setIsFlipped(!isFlipped);
     } else {
