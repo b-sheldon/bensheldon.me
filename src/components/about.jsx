@@ -43,9 +43,9 @@ function About(props) {
                 1000,
                 'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems.',
                 1000,
-                'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems. I\'m a rising senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering.',
+                'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems. I\'m a senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering.',
                 1000,
-                'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems. I\'m a rising senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering. I\'m a Ski Patroller at the Dartmouth Skiway, an avid climber, and a lover of board games.',
+                'Hi, I\'m Ben. I\'m a software developer with a passion for finding creative solutions to complex problems. I\'m a senior at Dartmouth College pursuing a B.A. in Engineering Sciences with a minor in CS and a B.E. in Computer Engineering. I\'m a Ski Patroller at the Dartmouth Skiway, an avid climber, and a lover of board games.',
               ]}
             />
           ) : null }
