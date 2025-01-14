@@ -4,19 +4,19 @@ import React, { useEffect, useState } from 'react';
 import { useSpringCarousel } from 'react-spring-carousel';
 import { PiArrowCircleLeftThin, PiArrowCircleRightThin } from 'react-icons/pi';
 import Card from './card';
-import KeyShot1 from '../img/projects/ignight/KeyShot1.png';
-import KeyShot4 from '../img/projects/ignight/KeyShot4.png';
-import HarmonizeFeed from '../img/projects/harmonize/harmonize-feed.png';
-import HarmonizePreview from '../img/projects/harmonize/harmonize-preview.mp4';
-import WhatTheYapPreview from '../img/projects/what-the-yap/what-the-yap-preview.mp4';
-import WhatTheYapHome from '../img/projects/what-the-yap/what-the-yap-home.png';
-import LostInSpaceKeyShot from '../img/projects/lost-in-space/Ben_UnityProject_KeyShot2.png';
-import LostInSpacePreview from '../img/projects/lost-in-space/Ben_UnityProject_VideoClip.mp4';
-import WaterCaveScene1 from '../img/projects/water-cave-scene/FP_RedCrystal.png';
-import WaterCaveScene4 from '../img/projects/water-cave-scene/FP_Angle4.mp4';
-import ReplayPreview from '../img/projects/replay/replay-preview.mp4';
 
 const Projects = (props) => {
+  const KeyShot1 = '/img/projects/ignight/KeyShot1.png';
+  const KeyShot4 = '/img/projects/ignight/KeyShot4.png';
+  const HarmonizeFeed = '/img/projects/harmonize/harmonize-feed.png';
+  const HarmonizePreview = '/img/projects/harmonize/harmonize-preview.mp4';
+  const WhatTheYapPreview = '/img/projects/what-the-yap/what-the-yap-preview.mp4';
+  const WhatTheYapHome = '/img/projects/what-the-yap/what-the-yap-home.png';
+  const LostInSpaceKeyShot = '/img/projects/lost-in-space/Ben_UnityProject_KeyShot2.png';
+  const LostInSpacePreview = '/img/projects/lost-in-space/Ben_UnityProject_VideoClip.mp4';
+  const WaterCaveScene1 = '/img/projects/water-cave-scene/FP_RedCrystal.png';
+  const WaterCaveScene4 = '/img/projects/water-cave-scene/FP_Angle4.mp4';
+  const ReplayPreview = '/img/projects/replay/replay-preview.mp4';
   const projects = [
     {
       id: 'project3',

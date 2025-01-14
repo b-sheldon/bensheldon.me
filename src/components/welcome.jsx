@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 import React from 'react';
-import adventure from '../img/adventure.png';
-import climb from '../img/climb.png';
-import ski from '../img/ski.png';
-import eat from '../img/eat.png';
 
 function Welcome(props) {
+  const adventure = '/img/adventure.png';
+  const climb = '/img/climb.png';
+  const ski = '/img/ski.png';
+  const eat = '/img/eat.png';
   // const [text, setText] = useState('____');
 
   const handleHoverEnter = (event, action) => {

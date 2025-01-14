@@ -6,8 +6,6 @@ import React, { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import useStore from '../store';
 import Skill from './skill';
-import Portrait1 from '../img/portrait_1.png';
-import Portrait2 from '../img/portrait_2.png';
 
 function About(props) {
   const skills = ['React', 'TailwindCSS', 'JavaScript', 'Java', 'Python', 'C++', 'C#', 'MongoDB', 'Node.js', 'Unity', 'Git', 'HTML', 'CSS', 'Firebase', 'Electron'];
@@ -30,10 +28,10 @@ function About(props) {
       <div className="flex flex-row h-full gap-12 jusify-center mx-[10vw] pt-[60px]">
         <div className="flex flex-col h-full w-[30vw] bg-blue items-center justify-around">
           <div style={{ width: portraitSize, height: portraitSize }}>
-            <img src={Portrait1} alt="Portrait 1" className="object-cover rounded-full" />
+            <img src="/img/portrait_1.png" alt="Portrait 1" className="object-cover rounded-full" />
           </div>
           <div style={{ width: portraitSize, height: portraitSize }}>
-            <img src={Portrait2} alt="Portrait 2" className="object-cover rounded-full" />
+            <img src="/img/portrait_2.png" alt="Portrait 2" className="object-cover rounded-full" />
           </div>
         </div>
         <div className="flex flex-col justify-center h-full gap-24 grow basis-1">
